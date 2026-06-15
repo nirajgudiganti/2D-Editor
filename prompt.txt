@@ -1,0 +1,114 @@
+Prompt 1 – Implement Basic Canvas Functions
+I am creating a 2D Graphics Editor in C.
+
+I have a canvas represented by:
+
+#define WIDTH 80
+#define HEIGHT 24
+
+char picture[HEIGHT][WIDTH];
+
+Implement the following functions:
+
+1. clearPicture() → fill the canvas with '_'
+2. displayPicture() → print the canvas row by row
+3. setPixel(int x, int y) → place '*' at valid coordinates
+
+Do not change the program structure.
+Use only standard C.
+Prompt 2 – Implement Line Drawing
+Now implement drawLine(int x1, int y1, int x2, int y2).
+
+Requirements:
+- Draw a line using '*' characters.
+- Handle horizontal, vertical, and diagonal lines.
+- Use Bresenham's Line Drawing Algorithm.
+- Use setPixel() for plotting.
+- Keep the existing code structure unchanged.
+
+Provide only the function code and explanation.
+Prompt 3 – Implement Rectangle, Circle, and Triangle
+Using the existing drawLine() function, implement:
+
+1. drawRectangle(int x1, int y1, int x2, int y2)
+   - Draw four edges using drawLine()
+
+2. drawCircle(int cx, int cy, int radius)
+   - Use Midpoint Circle Algorithm
+   - Plot all eight symmetric points
+
+3. drawTriangle(int x1, int y1, int x2, int y2, int x3, int y3)
+   - Draw three sides using drawLine()
+
+Keep the implementation modular.
+Prompt 4 – Convert Into Object-Based Graphics Editor
+Enhance the 2D Graphics Editor.
+
+Requirements:
+
+1. Create a Shape structure that can store:
+   - shape type
+   - coordinates
+   - radius
+   - active status
+
+2. Support shape types:
+   - LINE
+   - RECTANGLE
+   - CIRCLE
+   - TRIANGLE
+
+3. Store multiple shapes in an array:
+   Shape objects[MAX_OBJECTS];
+
+4. Each shape should remain stored after creation.
+
+Do not remove existing drawing functions.
+Provide complete code modifications.
+Prompt 5 – Add Object Management Features
+Extend the graphics editor with object management.
+
+Add:
+
+1. addObject()
+   - Create shapes interactively
+   - Store them in objects[]
+
+2. listObjects()
+   - Show all active object indices
+
+3. deleteObject()
+   - Mark an object inactive
+
+4. redrawPicture()
+   - Clear the canvas
+   - Redraw every active object
+
+Use the existing Shape structure and drawing functions.
+
+Keep the code beginner-friendly and menu-driven.
+Prompt 6 – Add Modify Object Feature and Final Menu System
+Complete the graphics editor project.
+
+Requirements:
+
+1. Implement modifyObject()
+   - Select an object by index
+   - Change its type and coordinates
+   - Redraw the canvas
+
+2. Create showMenu() with options:
+   1. Add object
+   2. Delete object
+   3. Modify object
+   4. Display picture
+   5. List objects
+   0. Exit
+
+3. Update main() to use the new menu system.
+
+4. Keep all code in a single C file.
+
+5. Use only standard C libraries.
+
+6. Produce the complete final source code.
